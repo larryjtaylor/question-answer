@@ -1,0 +1,28 @@
+{{#if addNewQuestion}}
+  <h1>New Question</h1>
+  <div>
+    <form>
+      <div class="form-group">
+        <label for="body">Question:</label>
+        {{input value=body id="body"}}
+      </div>
+
+      <div class="form-group">
+        <label for="author">Name:</label>
+        {{input value=author id="author"}}
+      </div>
+
+      <div class="form-group">
+        <label for="experience">Your coding experience level:</label>
+        {{input value=experience id="experience" placeholder='beginner, some experience, pro, etc...'}}
+      </div>
+
+
+      <button {{action 'saveQuestion'}}>Save</button>
+      <button {{action 'hideForm'}} class='btn btn-warning'>Cancel</button>
+
+    </form>
+  </div>
+{{else}}
+  <button {{action 'questionFormShow'}}>New Question</button>
+{{/if}}
