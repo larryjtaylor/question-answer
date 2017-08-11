@@ -4,11 +4,20 @@
   <h4>This is a place where you can find answers to all the questions you have about becoming a web developer. Don't be shy... If you are wondering, chances are there are a lot more people out there with the same question.</h4>
 
   <ul class='list-unstyled'>
-    {{#each model as |question|}}
+    {{#each model.questions as |question|}}
     {{question-tile question=question update="update" destroyQuestion="destroyQuestion"}}
 
     {{/each}}
   </ul>
-</div>
 
-{{new-question saveQuestion="saveQuestion"}}
+  {{new-question saveQuestion="saveQuestion"}}
+
+  <h2> All Answers </h2>
+
+  <ul>
+    {{#each model.answers as |answer|}}
+      <li>{{answer.body}} -- {{answer.author}}, {{answer.experience}}</li>
+    {{/each}}
+  </ul>
+
+</div>

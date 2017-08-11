@@ -1,5 +1,2 @@
-<li>{{question.body}} -- {{question.author}}, {{question.experience}} </li>
-
-{{update-question question=question update="update"}}
-
-<button {{action 'delete' question}}>Delete question</button><br><br>
+<li>{{#link-to 'question' question.id}}{{question.body}}{{/link-to}} -- {{question.author}}, {{question.experience}} </li>
+<br><br>
