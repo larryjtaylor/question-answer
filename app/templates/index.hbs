@@ -1,9 +1,12 @@
-<h1>Ask Away!</h1>
+<div class="container">
+  <h1>Ask Away!</h1>
 
-<h4>This is a place where you can find answers to all the questions you have about becoming a web developer. Don't be shy... If you are wondering, chances are there are a lot more people out there with the same question.</h4>
+  <h4>This is a place where you can find answers to all the questions you have about becoming a web developer. Don't be shy... If you are wondering, chances are there are a lot more people out there with the same question.</h4>
 
-<ul class='list-unstyled'>
-  {{#each model as |question|}}
-     <li>{{question.body}} -- {{question.author}}, {{question.experience}}</li><br>
-  {{/each}}
-</ul>
+  <ul class='list-unstyled'>
+    {{#each model as |question|}}
+    {{question-tile question=question destroyQuestion="destroyQuestion"}}
+
+    {{/each}}
+  </ul>
+</div>
