@@ -17,9 +17,9 @@
         {{input value=experience id="experience" placeholder=question.experience}}
       </div>
 
-      <button {{action 'update' question}}>Save</button>
+      <button {{action 'update' question}}  class='btn btn-info'>Save</button>
     </form>
   </div>
 {{else}}
-  <button {{action 'updateQuestionForm'}}>Update</button>
+  <button {{action 'updateQuestionForm'}} class='btn btn-primary'>Update</button>
 {{/if}}

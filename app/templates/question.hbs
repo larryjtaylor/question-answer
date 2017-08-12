@@ -1,7 +1,12 @@
 <div class="container">
+  <br><br><br><br>
   <h2>More information about {{model.author}}'s question</h2>
 
-  {{question-detail question=model destroyQuestion="destroyQuestion"}}
-  
+  {{question-tile question=model destroyQuestion="destroyQuestion" destroyAnswer="destroyAnswer"}}
+
   {{update-question question=model update="update"}}
+
+
+  {{new-answer saveAnswer="saveAnswer" question=model}}
+
 </div>

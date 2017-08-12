@@ -1,3 +1,10 @@
 {{question.body}} -- {{question.author}}, {{question.experience}}
 
-<button {{action 'delete' question}}>Delete Question</button>
+<button {{action 'delete' question}} class='btn btn-danger'>Delete</button>
+
+<h2> Answers </h2>
+<ul>
+  {{#each model.answers as |answer|}}
+    {{answer-tile answer=answer destroyAnswer="destroyAnswer"}}
+  {{/each}}
+</ul>
