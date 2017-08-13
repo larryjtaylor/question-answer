@@ -1,15 +1,17 @@
 <div class="container">
   <br><br><br><br>
-  <h1>Ask Away!</h1>
+    <div class="well" id='questionWell'>
+      <h1>Ask Away!</h1>
 
-  <h4>This is a place where you can find answers to all the questions you have about becoming a web developer. Don't be shy... If you are wondering, chances are there are a lot more people out there with the same question.</h4>
+      <h4>This is a place where you can find answers to all the questions you have about becoming a web developer. Don't be shy... If you are wondering, chances are there are a lot more people out there with the same question.</h4>
 
-  <ul class='list-unstyled'>
-    {{#each model.questions as |question|}}
-      {{question-tile question=question}}
-    {{/each}}
-  </ul>
+      <ul class='list-unstyled'>
+        {{#each model.questions as |question|}}
+        {{question-tile question=question}}
+        {{/each}}
+      </ul>
 
-  {{new-question saveQuestion="saveQuestion"}}
-
+      {{new-question saveQuestion="saveQuestion"}}
+    </div>
+    <img src="http://pppre.s3.amazonaws.com/2e5adf67004f3eea/859440bb685b45d6b5ca5bc424f4e341.jpg" id='devPic'>
 </div>
