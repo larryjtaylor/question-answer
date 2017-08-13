@@ -4,7 +4,7 @@
 
 <h2> Answers </h2>
 <ul>
-  {{#each model.answers as |answer|}}
+  {{#each question.answers as |answer|}}
     {{answer-tile answer=answer destroyAnswer="destroyAnswer"}}
   {{/each}}
 </ul>
